@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Recipe-App';
+  title = 'my-first-project';
+  name = 'Mohit Upadhyay';
 }
+// how the module work come under .ts file 
