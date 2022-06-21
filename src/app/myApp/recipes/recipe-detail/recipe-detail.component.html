@@ -5,24 +5,24 @@
 </div><br>
 <div class="row">
     <div class="col-xs-12">
-        <img src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="rounded mx-auto d-block" 
-        style="max-width: 300px;float: left;">
+        <img src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="rounded mx-auto d-block"
+            style="max-width: 300px;float: left;">
     </div>
 </div><br>
-<div class="row">
-    <div class="col-xs-12">
-        <div class="dropdown">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                Manage Recipe
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Shopping List</a></li>
-                <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
-                <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
-            </ul>
-        </div>
-    </div>
-</div><br>
+
+<div ngbDropdown class="dropdown">
+    <button ngbDropdownToggle class="btn btn-success" type="button" id="dropdownMenuButton1" aria-expanded="false">
+        Dropdown button
+    </button>
+    <ul ngbDropdownMenu aria-labelledby="dropdownMenuButton1">
+        <li><a ngbDropdownItem (click)="onAddToShoppingList()" style="cursor:pointer;">Shopping List</a></li>
+        <li><a ngbDropdownItem (click)="onEditToShoppingList()" style="cursor:pointer;">Edit Recipe</a></li>
+        <li><a ngbDropdownItem (click)="onDeleteToShoppingList()" style="cursor:pointer;">Delete Recipe</a></li>
+    </ul>
+</div>
+
+<br>
+
 <div class="row">
     <div class="col-xs-12">
         {{recipe.description}}
@@ -30,6 +30,10 @@
 </div><br>
 <div class="row">
     <div class="col-xs-12">
-        Ingridients
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+                {{ingredient.name}} - {{ingredient.amount}}
+            </li>
+        </ul>
     </div>
 </div>
