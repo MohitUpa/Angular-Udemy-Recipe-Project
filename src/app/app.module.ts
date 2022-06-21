@@ -16,9 +16,10 @@ import { DropdownDirective } from './myApp/shared/dropdown.directive';
 import { ShoppingListService } from './myApp/shopping-list/shopping-list.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RecipeStartComponent } from './myApp/recipes/recipe-start/recipe-start.component';
-
+import { RecipesEditComponent } from './myApp/recipes/recipes-edit/recipes-edit.component';
 @NgModule({
   declarations: [
+    RecipesEditComponent,
     AppComponent,
     HeaderMyAppComponent,
     RecipesComponent,
@@ -29,7 +30,7 @@ import { RecipeStartComponent } from './myApp/recipes/recipe-start/recipe-start.
     ShoppingEditComponent,
     MyAppComponent,
     DropdownDirective,
-    RecipeStartComponent
+    RecipeStartComponent,
   ],
   imports: [
     BrowserModule,
