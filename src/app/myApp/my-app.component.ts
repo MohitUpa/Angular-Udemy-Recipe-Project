@@ -14,9 +14,6 @@ export class MyAppComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  onNavigate(feature:any) {
-    console.log(feature);
-    this.loadedFeature = feature;
-  }
+
 
 }
